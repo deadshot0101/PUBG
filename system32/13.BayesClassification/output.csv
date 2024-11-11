@@ -1,0 +1,19 @@
+Calculations for new instance:
+P(Color=Green | H) = 1 / 3 = 0.333333
+P(Color=Green | M) = 2 / 5 = 0.4
+P(Height=Tall | H) = 1 / 3 = 0.333333
+P(Height=Tall | M) = 2 / 5 = 0.4
+P(Legs=2 | H) = 3 / 3 = 1
+P(Legs=2 | M) = 2 / 5 = 0.4
+P(Smelly=No | H) = 2 / 3 = 0.666667
+P(Smelly=No | M) = 2 / 5 = 0.4
+
+Final Probabilities:
+P(H | New Instance) = 0.0039
+P(M | New Instance) = 0.04687
+
+Normalized Probabilities:
+H = 63.4518%
+M = 36.5482%
+
+New Instance belongs to class: H

@@ -1,0 +1,19 @@
+Bins - 
+Bin1: 3 4 5 
+Bin2: 6 6 7 
+Bin3: 7 8 9 
+
+Median Binning -
+Bin1: 4 4 4 
+Bin2: 6 6 6 
+Bin3: 8 8 8 
+
+Mean Binning -
+Bin1: 4 4 4 
+Bin2: 6.33 6.33 6.33 
+Bin3: 8 8 8 
+
+Boundaries Binning -
+Bin1: 3 3 5 
+Bin2: 6 6 7 
+Bin3: 7 7 9 

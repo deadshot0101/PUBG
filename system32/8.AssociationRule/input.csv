@@ -1,0 +1,5 @@
+bread,butter,jam,sauce,egg,milk
+bread,butter,jam,,,,
+bread,,,sauce,egg,
+,,,sauce,egg,
+bread,,,,,milk

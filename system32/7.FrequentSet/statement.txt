@@ -1,0 +1,4 @@
+assume 10 transaction and take min 6 type of item,generate all types of item for every pass
+
+
+take min support and carry only those with frequency more than min support

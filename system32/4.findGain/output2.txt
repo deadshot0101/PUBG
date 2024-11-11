@@ -1,0 +1,8 @@
+Attribute    | Information Gain | Entropy
+---------------------------------------------
+Day          | 0.94029           | 0.00000
+Level        | 0.15184           | 0.78845
+PlayGame     | 0.94029           | 0.00000
+Routine      | 0.04813           | 0.89216
+
+The splitting attribute is selected as Day because it has the maximum information gain of 0.94029.
