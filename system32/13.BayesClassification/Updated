@@ -1,0 +1,80 @@
+#include <bits/stdc++.h>
+using namespace std;
+vector<vector<string>> data;
+vector<string> split(string &currRow, char delimiter)
+{
+    vector<string> tokens;
+    string token;
+    stringstream ss(currRow);
+    while (getline(ss, token, delimiter))
+    {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
+void readCSV(string &filename, bool hasHeader)
+{
+    ifstream fileObj(filename);
+    if (!fileObj.is_open())
+    {
+        cout << "Error opening a file!!" << endl;
+        return;
+    }
+    string row;
+    if (hasHeader and getline(fileObj, row))
+    {
+        vector<string> currRow = split(row, ',');
+        cout << "Header:";
+        for (auto &col : currRow)
+        {
+            cout << col << "|";
+        }
+        cout << endl;
+    }
+    while (getline(fileObj, row))
+    {
+        vector<string> currRow = split(row, ',');
+        vector<string> tmp;
+        for (int i = 0; i < currRow.size(); i++)
+        {
+            if (i != 0)
+            {
+                tmp.push_back((currRow[i]));
+            }
+        }
+
+        data.push_back(tmp);
+    }
+    int n = data.size();  // Number of rows
+    int m = data[0].size(); // Number of columns
+
+    // Map to store the counts of pairs: (feature, species)
+    map<pair<string, string>, int> mp;
+
+    int speciesColIndex = m - 1; // Index of the "Species" column
+
+    // Loop through all features except the "Species" column
+    for (int featureCol = 1; featureCol < speciesColIndex; featureCol++)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            string featureValue = data[i][featureCol];
+            string speciesValue = data[i][speciesColIndex];
+            mp[{featureValue, speciesValue}]++;
+        }
+    }
+
+    // Output the counts
+    for (auto &pr : mp)
+    {
+        cout << pr.first.first << ", " << pr.first.second << " : " << pr.second << endl;
+    }
+
+    fileObj.close();
+}
+int main()
+{
+    string inp = "inp.csv";
+    readCSV(inp, true);
+    return 0;
+}
